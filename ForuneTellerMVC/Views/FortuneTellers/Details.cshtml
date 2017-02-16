@@ -1,0 +1,71 @@
+﻿@model ForuneTellerMVC.Models.FortuneTeller
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FortuneTeller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+           
+        </dt>
+
+        <dd>
+           
+            @{ 
+                ViewBag.Age = "5 years";
+            }
+            <p>You will retire in <span>@ViewBag.Age</span>Age</p>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthMonth)
+        </dt>
+
+        <dd>
+            <p>Your next trip will be in <span>@ViewBag.BirthMonth</span></p>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FavoriteColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FavoriteColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberofSiblings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberofSiblings)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
